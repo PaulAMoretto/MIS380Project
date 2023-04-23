@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+author: "Moretto"
+date: "2023-04-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+df = data.frame(naRmData)
+
+summary(df)
+df_Ann <- df["Year",'Ann_Ch_Per']
+
+ggplot(df_Ann,aes(x = Year, y = Ann_Ch_Per))+geom_boxplot()
+#model1 <- glm(Legal ~ Ann_Ch_Per, data = df, family = "binomial")
+#model1
+```
+
